@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<script>
+    function showPage(pageNumber) {
+        // Masquer tous les formulaires
+        var forms = document.getElementsByTagName("form");
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].style.display = "none";
+        }
+        // Afficher le formulaire de la page spécifiée
+        document.getElementsByTagName("form")[pageNumber - 1].style.display = "block";
+    }
+</script>
+<style>
+
+.btn-cancel {
+    background-color: #ff5733;
+    color: white;
+}
+
+.btn-next{
+    background-color: #7bed9f;
+    color: white;
+}
+</style>
+<header>
+
+    <div class="header">
+        <a href="UPEC-logo.svg.png" class="logo">
+        <img src="UPEC-logo.svg.png" class="logo" alt="logo upec">
+        <div class="header-right">
+            <a class="active" href="creerform.html"> Créer ma convention</a>
+            <a href="modifform.html"> Modifier ma convention</a>
+            <a href="signerconv.html"> Signer ma convention</a>
+            <a href="telechagerConv.html"> Télécharger ma convention</a>
+        </div>
+    </div>
+</header> 
+<body>
+
+    <div class="centered">
+        <form action="bref"></form>
+        <div class="caseremplir">
+            <button onclick="showPage(1)" class="download-button">Créer ma convention</button>
+        </div>
+    </div>
+    
+        <div class="centered">
+        <form method="post" style="display: block;">
+            <h2>L’établissement d'enseignement</h2>
+            <label for="nomet">Nom :</label><br>
+            <input type="text" id="nomet" name="nomet" required>
+            <br> <p></p>
+            <label for="adrsset">Adresse :</label><br>
+            <input type="text" id="adrsset" name="adrsset" required>
+            <br> <p></p>
+            <label for="numet">Numéro de téléphone :</label><br>
+            <input type="tel" id="numet" name="numet" required>
+            <br> <p></p>
+            <label for "respet">Représenté par (signataire de la convention) :</label><br>
+            <input type="text" id="respet" name="respet" required>
+            <br> <p></p>
+            <label for="qrespet">Qualité du représentant :</label><br>
+            <input type="text" id="qrespet" name="qrespet" required>
+            <br> <p></p>
+            <label for="ufret">Composante / UFR :</label><br>
+            <input type="text" id="ufret" name="ufret" required>
+            <br> <p></p>
+            <label for="numrepresentant">Numéro représentant :</label><br>
+            <input type="text" id="numrepresentant" name="numrepresentant" required>
+            <br> <p></p>
+            <label for="mailet">Mail représentant :</label><br>
+            <input type="email" id="mailet" name="mailet" required>
+            <br> <p></p>
+            <label for="difadrsset">Adresse (si différente de celle de l'établissement) :</label><br>
+            <input type="text" id="difadrsset" name="difadrsset" required>
+            <br> <p></p>
+            <div class="caseremplir">
+                <button onclick="showPage(1)" class="w3-button w3-left btn-cancel">Précédent</button>
+            </div>
+            <div>
+                <button onclick="showPage(2)" class="w3-button w3-right btn-next">Suivant</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    
+    </body>
+    </html>
+    
+
+    <!-- Page 2 -->
+    <div class="centered">
+        <form method="post" style="display: block;">
+        <h2>L'organisme d'accueil</h2>
+        <label for="nomac">Nom :</label><br>
+        <input type="text" id="nomac" name="nomac" required>
+        <br> <p></p>
+
+        <label for="adrssac">Adresse :</label><br>
+        <input type="text" id="adrssac" name="adrssac" required>
+        <br> <p></p>
+
+        <label for="respet">Représenté par (signataire de la convention) :</label><br>
+        <input type="text" id="respet" name="respet" required>
+        <br> <p></p>
+
+        <label for="qrespet">Qualité du représentant :</label><br>
+        <input type="text" id="qrespet" name="qrespet" required>
+        <br> <p></p>
+
+        <label for="qrespet"> Service dans lequel le stage sera effectué : </label><br>
+        <input type="text" id="qrespet" name="qrespet" required>
+        <br> <p></p>
+
+        <label for="numet">Numéro de téléphone :</label><br>
+        <input type="tel" id="numet" name="numet" required>
+        <br> <p></p>
+
+        <label for="mailet">Mail :</label><br>
+        <input type="email" id="mailet" name="mailet" required>
+        <br> <p></p>
+
+        <label for="difadrsset">Adresse (si différente de l'adresse de l'organisme) :</label><br>
+        <input type="text" id="difadrsset" name="difadrsset" required>
+        <br> <p></p>
+        <div class="w3-row">
+            <div class="w3-half caseremplir">
+                <button onclick="showPage(1)" class="w3-button w3-left btn-cancel">Précédent</button>
+            </div>
+            <div class="w3-half">
+                <button onclick="showPage(3)" class="w3-button w3-right btn-next">Suivant</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Page 3 -->
+    <div class="centered">
+        <form method="post" style="display: block;">
+        <h2>Le stagiaire</h2>
+        <label for="nomac">Nom :</label><br>
+        <input type="text" id="nomac" name="nomac" required>
+        <br> <p></p>
+
+        <label for="nomac">Prénom :</label><br>
+        <input type="text" id="nomac" name="nomac" required>
+        <br> <p></p>
+
+        <label for="nomac">Sexe :</label><br>
+        <input type="radio" name="gender" value="male"> H
+        <input type="radio" name="gender" value="female"> F
+        <br><p></p>
+
+        <label for="dateNaissance">Date de Naissance: </label> <br>
+        <input type="date" id="start" name="trip-start" required>
+        <br><p></p>
+
+        <label for="adrssac">Adresse :</label><br>
+        <input type="text" id="adrssac" name="adrssac" required>
+        <br> <p></p>
+
+        <label for="numet">Numéro de téléphone :</label><br>
+        <input type="tel" id="numet" name="numet" required>
+        <br> <p></p>
+
+        <label for="mailet">Mail :</label><br>
+        <input type="email" id="mailet" name="mailet" required>
+        <br><p></p>
+
+        <label for="intitule"> Intitulé de la formation suivi et volume horaire : </label><br>
+        <input type="text" id="intitule" name="intitule"/>
+        <div class="w3-row">
+            <div class="w3-half caseremplir">
+                <button onclick="showPage(2)" class="w3-button w3-left btn-cancel">Précédent</button>
+            </div>
+            <div class="w3-half">
+                <button onclick="showPage(4)" class="w3-button w3-right btn-next">Suivant</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Page 4 -->
+    <div class="centered">
+        <form method="post" style="display: block;">
+        <h2>Sujet de stage</h2>
+        <label for="Sujet de stage">Sujet de stage:</label><br>
+        <input type="text" required>
+        <br> <p></p>
+
+        <label for="dates">Du:</label>
+        <input type="date" required>
+        <br> <p></p>
+
+        <label for="dates">Au:</label>
+        <input type="date" required>
+        <br> <p></p>
+
+        <label for="duree">Répresentant une durée totale de </label>
+        <input type="number" required>
+        <label for="sm"></label>
+        <input type="radio" name="gender" value="male"> Semaine
+        <input type="radio" name="gender" value="female"> Mois
+        <br> <p></p>
+
+        <label for="teletravail">Teletravail ?</label><br>
+        <input type="radio" name="gender" value="male"> Oui
+        <input type="radio" name="gender" value="female"> Non
+        <br> <p></p>
+
+        <label for="com">Commentaire:</label><br>
+        <input type="text">
+        <br> <p></p>
+
+        <div class="w3-row">
+            <div class="w3-half caseremplir">
+                <button onclick="showPage(3)" class="w3-button w3-left btn-cancel">Précédent</button>
+            </div>
+            <div class="w3-half">
+                <button type="submit" class="w3-button w3-right">Soumettre</button>
+            </div>
+        </div>
+    </form>
+
+    </body>
+</html>
