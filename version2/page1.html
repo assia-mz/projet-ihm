@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+    .btn-cancel {
+        background-color: #ff5733;
+        color: white;
+    }
+
+    .btn-next {
+        background-color: #7bed9f;
+        color: white;
+    }
+</style>
+<header>
+    <div class="header">
+        <a href="UPEC-logo.svg.png" class="logo">
+            <img src="UPEC-logo.svg.png" class="logo" alt="logo upec">
+            <div class="header-right">
+                <a class="active" href="creerform.html"> Créer ma convention</a>
+                <a href="modifform.html"> Modifier ma convention</a>
+                <a href="signerconv.html"> Signer ma convention</a>
+                <a href="telechagerConv.html"> Télécharger ma convention</a>
+            </div>
+        </div>
+</header>
+<body>
+
+
+
+<!-- Page 1 -->
+<div class="centered">
+    <form method="post" id="form-page-2" class="showing-form">
+        <h2>L’établissement d'enseignement</h2>
+        <label for="nomet">Nom :</label><br>
+            <input type="text" id="nomet" name="nomet" required>
+            <br> <p></p>
+            <label for="adrsset">Adresse :</label><br>
+            <input type="text" id="adrsset" name="adrsset" required>
+            <br> <p></p>
+            <label for="numet">Numéro de téléphone :</label><br>
+            <input type="tel" id="numet" name="numet" required>
+            <br> <p></p>
+            <label for "respet">Représenté par (signataire de la convention) :</label><br>
+            <input type="text" id="respet" name="respet" required>
+            <br> <p></p>
+            <label for="qrespet">Qualité du représentant :</label><br>
+            <input type="text" id="qrespet" name="qrespet" required>
+            <br> <p></p>
+            <label for="ufret">Composante / UFR :</label><br>
+            <input type="text" id="ufret" name="ufret" required>
+            <br> <p></p>
+            <label for="numrepresentant">Numéro représentant :</label><br>
+            <input type="text" id="numrepresentant" name="numrepresentant" required>
+            <br> <p></p>
+            <label for="mailet">Mail représentant :</label><br>
+            <input type="email" id="mailet" name="mailet" required>
+            <br> <p></p>
+            <label for="difadrsset">Adresse (si différente de celle de l'établissement) :</label><br>
+            <input type="text" id="difadrsset" name="difadrsset" required>
+            <br> <p></p>
+
+        <!-- Précédent -->
+        <a href="creerform.html">
+            <button class="btn-cancel"> Précédent </button>
+        </a>
+
+        <!-- Suivant -->
+        <a href="page2.html">
+        </a>
+
+    </form>
+</div>
+</body>
+</html>
